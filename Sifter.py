@@ -1,6 +1,7 @@
 import cv2
 import numpy as np
 from PIL import Image
+np.set_printoptions(threshold=np.inf)
 
 def intoGrayScale(pathToFile):
     """Convert image into grayscale and return the grayscaled image object"""
@@ -13,4 +14,12 @@ def intoBinary(pathToImage):
     """Convert image into binary"""
     
 
-intoGrayScale('Pasted image.png')
+def asArray(pathToImage, pathToSave="pixelValues.txt"):
+    image = cv2.imread(pathToImage)
+    convertRGB = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+    with open(pathToSave, "a") as f:
+        for line in convertRGB:
+            f.write(str(line))
+    return
+# intoGrayScale('Pasted image.png')
+print(asArray('newIm.png'))
