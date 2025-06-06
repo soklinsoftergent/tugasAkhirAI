@@ -1,0 +1,18 @@
+# Core Packages
+torch>=2.0.1,<3.0.0  # PyTorch base
+torchvision>=0.15.2,<1.0.0
+
+# YOLOv8 and CV
+ultralytics==8.1.0  # YOLOv8 core
+opencv-python>=4.7.0,<5.0.0  # OpenCV
+numpy>=1.24.3,<2.0.0  # Array operations
+
+# Utilities
+tqdm>=4.65.0,<5.0.0  # Progress bars
+scikit-learn>=1.3.0,<2.0.0  # Metrics
+matplotlib>=3.7.1,<4.0.0  # Visualization
+pandas>=2.0.3,<3.0.0  # Data handling
+
+# Optional (for export)
+onnx>=1.14.0,<2.0.0  # ONNX export
+onnxruntime>=1.15.1,<2.0.0  # Inference
